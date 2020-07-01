@@ -1,0 +1,41 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+
+  width: 24.6vw;
+}
+
+.logo__image {
+  width: 14.583vw;
+  height: 6.563vw;
+}
+
+.logo__text {
+  align-self: center;
+
+  font-size: 0.729vw;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: @tablet-width) {
+  .logo {
+    width: 28%;
+  }
+
+  .logo__text {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .logo {
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+
+  .logo__image {
+    width: 100px;
+    height: auto;
+  }
+}
