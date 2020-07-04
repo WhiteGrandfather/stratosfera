@@ -1,1 +1,5 @@
-<svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="#fff" stroke-width="3" d="M1.5 20V0m7 20V8m7 12V4"/></svg>
+<svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="1.5" y1="20" x2="1.5" y2="6.55671e-08" stroke-width="3"/>
+<line x1="8.5" y1="20" x2="8.5" y2="8" stroke-width="3"/>
+<line x1="15.5" y1="20" x2="15.5" y2="4" stroke-width="3"/>
+</svg>

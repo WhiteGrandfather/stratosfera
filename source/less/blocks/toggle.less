@@ -1,0 +1,46 @@
+.toggle {
+  position: relative;
+
+  width: 46px;
+  height: 46px;
+  margin-left: auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 25px;
+    height: 3px;
+
+    border-radius: 3px;
+    background-color: @background-black;
+    box-shadow:
+      0 9px 0 0,
+      0 -9px 0 0;
+  }
+
+  &--cross::before {
+    display: none;
+  }
+}
+
+.toggle__icon {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .toggle {
+    display: none;
+  }
+}

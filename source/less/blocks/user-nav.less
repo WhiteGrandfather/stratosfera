@@ -1,0 +1,172 @@
+.user-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 46.5%;
+}
+
+.user-nav__link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 36px;
+  padding-right: 5px;
+}
+
+.user-nav__number {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: none;
+  margin: 0;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: 0.1em;
+
+  &--active {
+    display: block;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.user-nav__icon {
+  fill: @background-black;
+
+  &--favorites,
+  &--comparison {
+    stroke: @background-black;
+  }
+}
+
+.user-nav__text {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user-nav {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+    width: 12.2%;
+    min-height: 100px;
+    padding: 5px 10px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .user-nav__item {
+    position: relative;
+    width: 50%;
+
+    &--search {
+      display: none;
+    }
+  }
+
+  .user-nav__link {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .user-nav__icon {
+    fill: @background-white;
+
+    &--favorites {
+      width: 15px;
+      height: auto;
+
+      stroke: @background-white;
+    }
+
+    &--comparison {
+      stroke: @background-white;
+    }
+  }
+
+  .user-nav__number {
+    right: -4px;
+    display: block;
+
+    font-size: 13px;
+    line-height: 15px;
+    color: @font-white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-nav {
+    justify-content: space-around;
+    // align-items: flex-start;
+    width: 357px;
+    min-height: 103px;
+    padding: 0 9px;
+    flex-grow: 0;
+  }
+
+  .user-nav__item {
+    display: block;
+
+    width: auto;
+
+    &--search {
+      display: none;
+    }
+  }
+
+  .user-nav__link {
+    display: block;
+    height: 50px;
+    padding-top: 33px;
+    padding-right: 0;
+  }
+
+  .user-nav__number {
+    top: -3px;
+    left: 70%;
+    letter-spacing: 0.1em;
+
+    &--favorite {
+      left: 66%;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  .user-nav__icon {
+    position: absolute;
+    top: 15px;
+    left: 51%;
+
+    transform: translate(-50%, -50%);
+
+    &--cart {
+      left: 48%;
+    }
+  }
+
+  .user-nav__text {
+    display: block;
+    padding: 0;
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.06em;
+    color: @font-white;
+  }
+}

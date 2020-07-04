@@ -15,333 +15,606 @@
     <div class="main">
 
       <header class="main__page-header page-header">
+
         <div class="page-header__top-wrapper">
-          <div class="page-header__logo logo">
-            <a href="#" class="logo__link">
-              <img class="logo__image" src="img/logo.svg" width="143" height="25" alt="логотип PureLogic R&D" >
-            </a>
-          </div>
+          <a href="#" class="page-header__logo logo">
+            <img class="logo__image" src="img/logo.svg" width="143" height="25" alt="логотип PureLogic R&D">
+          </a>
           <div class="page-header__back-wrapper">
-            <svg class="catalog__icon" width="19" height="8">
+            <svg class="page-header__back-icon" width="19" height="8">
               <use href="#icon-arrow-left"></use>
             </svg>
             <button class="page-header__back-button">Назад</button>
           </div>
-          <button class="page-header__toggle toggle"></button>
+          <div class="page-header__toggle toggle">
+            <button class="toggle__button"></button>
+            <svg class="toggle__icon" width="16" height="15">
+              <use href="#icon-cross"></use>
+            </svg>
+          </div>
 
-          <ul class="page-hader__catalog catalog">
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon"  width="35" height="24">
-                  <use href="#icon-machines"></use>
-                </svg>
-                <p>Станки с ЧПУ DIY</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="31" height="28">
-                  <use href="#icon-mechatronics"></use>
-                </svg>
-                <p>Мехатроника</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="30" height="31">
-                  <use href="#icon-thermal-cutting"></use>
-                </svg>
-                <p>Термическая резка</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="31" height="27">
-                  <use href="#icon-cnc-sets"></use>
-                </svg>
-                <p>Наборы ЧПУ</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="33" height="33">
-                  <use href="#icon-cnc-electronics"></use>
-                </svg>
-                <p>Электроника ЧПУ</p>
-              </a>
-
-              <ul class="catalog__subdirectory-list" style="display: none">
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Блоки питания</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Аксессуары для блоков питания</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Преобразователи напряжения</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Силовые трансформаторы</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Стабилизаторы напряжения</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Фильтры подавления ЭМП</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Модули для Arduino</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Частотные преобразователи
-                    и аксессуары</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Блоки и стойки управления для станков с ЧПУ</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Сигнальные и силовые кабели</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Драйверы двигателей</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Компактные драйверы ШД с контроллером движения и аксессуары</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Твердотельные реле и аксессуары</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Пульты для станков ЧПУ</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Программируемые контроллеры ПЛК и HMI</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Промышленные клавиатуры</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Температурные контроллеры</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Платы коммутации, переходники и прочие модули</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Наборы с ЧПУ контроллерами PLCM</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Пульты для станков ЧПУ</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">ЧПУ DSP контроллеры-пульты</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">ЧПУ контроллеры и модули</a>
-                </li>
-                <li class="catalog__subdirectory-item">
-                  <svg class="catalog__image">
-                    <use href="#"></use>
-                  </svg>
-                  <a href="#" class="catalog__link">Цифровые измерители и измерительные панели для датчиков</a>
-                </li>
-              </ul>
-
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="29" height="29">
-                  <use href="#icon-electrical-engineering"></use>
-                </svg>
-                <p>Электротехника</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="40" height="24">
-                  <use href="#icon-electric-drive"></use>
-                </svg>
-                <p>Электропривод</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="44" height="44">
-                  <use href="#icon-rails"></use>
-                </svg>
-                <p>Направляющие</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="36" height="35">
-                  <use href="#icon-transmission"></use>
-                </svg>
-                <p>Передачи</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="29" height="28">
-                  <use href="#icon-mechanics"></use>
-                </svg>
-                <p>Механика</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="29" height="29">
-                  <use href="#icon-pneumatics"></use>
-                </svg>
-                <p>Пневматика</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">Инструмент
-                <svg class="catalog__icon" width="29" height="29">
-                  <use href="#icon-tool"></use>
-                </svg>
-                <p>Инструмент</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="29" height="37">
-                  <use href="#icon-equipment"></use>
-                </svg>
-                <p>Оснастка</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="21" height="35">
-                  <use href="#icon-lube"></use>
-                </svg>
-                <p>Смазка и СОЖ</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="29" height="25">
-                  <use href="#icon-software-cnc"></use>
-                </svg>
-                <p>Софт для ЧПУ</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="32" height="31">
-                  <use href="#icon-sale"></use>
-                </svg>
-                <p>Распродажа</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link">
-                <svg class="catalog__icon" width="25" height="23">
-                  <use href="#icon-logo-min"></use>
-                </svg>
-                <p>Услуги</p>
-              </a>
-            </li>
-          </ul>
         </div>
 
         <nav class="page-header__nav nav">
-          <!-- <ul class="nav__list">
-            <li class="nav__item nav__item--active">
-              <a class="nav__link nav__link--active">Главная</a>
+
+          <div class="nav__list-wrapper">
+
+            <ul class="nav__catalog catalog catalog--closed">
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="35" height="24">
+                    <use href="#icon-machines"></use>
+                  </svg>
+                  <p class="catalog__text">Станки с ЧПУ DIY</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="31" height="28">
+                    <use href="#icon-mechatronics"></use>
+                  </svg>
+                  <p class="catalog__text">Мехатроника</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="30" height="31">
+                    <use href="#icon-thermal-cutting"></use>
+                  </svg>
+                  <p class="catalog__text">Термическая резка</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="31" height="27">
+                    <use href="#icon-cnc-sets"></use>
+                  </svg>
+                  <p class="catalog__text">Наборы ЧПУ</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="33" height="33">
+                    <use href="#icon-cnc-electronics"></use>
+                  </svg>
+                  <p class="catalog__text">Электроника ЧПУ</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+
+                <!-- Временно style="display: none"-->
+                <ul class="catalog__subdirectory-list" style="display: none">
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="31" height="31">
+                        <use href="#icon-power-supply-1"></use>
+                      </svg>
+                      <p class="catalog__text">Блоки питания</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="28" height="28">
+                        <use href="#icon-socket"></use>
+                      </svg>
+                      <p class="catalog__text">Аксессуары для блоков питания</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="30" height="30">
+                        <use href="#icon-power-supply-2"></use>
+                      </svg>
+                      <p class="catalog__text">Преобразователи напряжения</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="31" height="31">
+                        <use href="#icon-power-supply-1"></use>
+                      </svg>
+                      <p class="catalog__text">Силовые трансформаторы</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="28" height="28">
+                        <use href="#icon-socket"></use>
+                      </svg>
+                      <p class="catalog__text">Стабилизаторы напряжения</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="30" height="30">
+                        <use href="#icon-power-supply-2"></use>
+                      </svg>
+                      <p class="catalog__text">Фильтры подавления ЭМП</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="31" height="31">
+                        <use href="#icon-power-supply-1"></use>
+                      </svg>
+                      <p class="catalog__text">Модули для Arduino</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="28" height="28">
+                        <use href="#icon-socket"></use>
+                      </svg>
+                      <p class="catalog__text">Частотные преобразователи и аксессуары</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="30" height="30">
+                        <use href="#icon-power-supply-2"></use>
+                      </svg>
+                      <p class="catalog__text">Блоки и стойки управления для станков с ЧПУ</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="31" height="31">
+                        <use href="#icon-power-supply-1"></use>
+                      </svg>
+                      <p class="catalog__text">Сигнальные и силовые кабели</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="28" height="28">
+                        <use href="#icon-socket"></use>
+                      </svg>
+                      <p class="catalog__text">Драйверы двигателей</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="30" height="30">
+                        <use href="#icon-power-supply-2"></use>
+                      </svg>
+                      <p class="catalog__text">Компактные драйверы ШД с контроллером движения и аксессуары</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="31" height="31">
+                        <use href="#icon-power-supply-1"></use>
+                      </svg>
+                      <p class="catalog__text">Твердотельные реле и аксессуары</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="28" height="28">
+                        <use href="#icon-socket"></use>
+                      </svg>
+                      <p class="catalog__text">Пульты для станков ЧПУ</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="30" height="30">
+                        <use href="#icon-power-supply-2"></use>
+                      </svg>
+                      <p class="catalog__text">Программируемые контроллеры ПЛК и HMI</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="31" height="31">
+                        <use href="#icon-power-supply-1"></use>
+                      </svg>
+                      <p class="catalog__text">Промышленные клавиатуры</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="28" height="28">
+                        <use href="#icon-socket"></use>
+                      </svg>
+                      <p class="catalog__text">Температурные контроллеры</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="30" height="30">
+                        <use href="#icon-power-supply-2"></use>
+                      </svg>
+                      <p class="catalog__text">Платы коммутации, переходники и прочие модули</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="31" height="31">
+                        <use href="#icon-power-supply-1"></use>
+                      </svg>
+                      <p class="catalog__text">Наборы с ЧПУ контроллерами PLCM</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="28" height="28">
+                        <use href="#icon-socket"></use>
+                      </svg>
+                      <p class="catalog__text">Пульты для станков ЧПУ</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="30" height="30">
+                        <use href="#icon-power-supply-2"></use>
+                      </svg>
+                      <p class="catalog__text">ЧПУ DSP контроллеры-пульты</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="31" height="31">
+                        <use href="#icon-power-supply-1"></use>
+                      </svg>
+                      <p class="catalog__text">ЧПУ контроллеры и модули</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="catalog__subdirectory-item">
+                    <a href="#" class="catalog__link">
+                      <svg class="catalog__icon" width="28" height="28">
+                        <use href="#icon-socket"></use>
+                      </svg>
+                      <p class="catalog__text">Цифровые измерители и измерительные панели для датчиков</p>
+                      <svg class="catalog__arrow-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="29" height="29">
+                    <use href="#icon-electrical-engineering"></use>
+                  </svg>
+                  <p class="catalog__text">Электротехника</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="40" height="24">
+                    <use href="#icon-electric-drive"></use>
+                  </svg>
+                  <p class="catalog__text">Электропривод</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="44" height="44">
+                    <use href="#icon-rails"></use>
+                  </svg>
+                  <p class="catalog__text">Направляющие</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="36" height="35">
+                    <use href="#icon-transmission"></use>
+                  </svg>
+                  <p class="catalog__text">Передачи</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="29" height="28">
+                    <use href="#icon-mechanics"></use>
+                  </svg>
+                  <p class="catalog__text">Механика</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="29" height="29">
+                    <use href="#icon-pneumatics"></use>
+                  </svg>
+                  <p class="catalog__text">Пневматика</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="29" height="29">
+                    <use href="#icon-tool"></use>
+                  </svg>
+                  <p class="catalog__text">Инструмент</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="29" height="37">
+                    <use href="#icon-equipment"></use>
+                  </svg>
+                  <p class="catalog__text">Оснастка</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="21" height="35">
+                    <use href="#icon-lube"></use>
+                  </svg>
+                  <p class="catalog__text">Смазка и СОЖ</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="29" height="25">
+                    <use href="#icon-software-cnc"></use>
+                  </svg>
+                  <p class="catalog__text">Софт для ЧПУ</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="32" height="31">
+                    <use href="#icon-sale"></use>
+                  </svg>
+                  <p class="catalog__text">Распродажа</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link">
+                  <svg class="catalog__icon" width="25" height="23">
+                    <use href="#icon-logo-min"></use>
+                  </svg>
+                  <p class="catalog__text">Услуги</p>
+                  <svg class="catalog__arrow-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav__list nav__list--closed">
+              <li class="nav__item">
+                <a href="#" class="nav__link">О компании
+                  <svg class="nav__list-icon nav__list-icon--active" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+
+                <!-- Временно скрыто -->
+                <ul class="nav__sublist" style="display: none">
+                  <li class="nav__sublist-item">
+                    <a href="#" class="nav__sublist-link">Наше производство</a>
+                  </li>
+                  <li class="nav__sublist-item">
+                    <a href="#" class="nav__sublist-link">Наши сотрудники</a>
+                  </li>
+                  <li class="nav__sublist-item">
+                    <a href="#" class="nav__sublist-link">Вакансии</a>
+                  </li>
+                  <li class="nav__sublist-item">
+                    <a href="#" class="nav__sublist-link">Новости</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Покупателю
+                  <svg class="nav__list-icon nav__list-icon--active" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Акции
+                  <svg class="nav__list-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Поддержка и сервис
+                  <svg class="nav__list-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакты
+                  <svg class="nav__list-icon" width="12" height="8">
+                    <use href="#icon-arrow"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <form class="nav__search search">
+              <input class="search__input search__input--closed" type="search" name="search" placeholder="Что вы ищете...">
+              <div class="search__button-wrapper">
+                <svg class="search__icon" width="17" height="16">
+                  <use href="#icon-search"></use>
+                </svg>
+                <input class="search__button" type="submit" value="Поиск">
+              </div>
+            </form>
+
+          </div>
+
+          <ul class="nav__user-nav user-nav">
+            <li class="user-nav__item user-nav__item--search">
+              <a href="#" class="user-nav__link">
+                <svg class="user-nav__icon" width="19" height="19">
+                  <use href="#icon-search-mobile"></use>
+                </svg>
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Шугаринг и депиляция воском</a>
+            <li class="user-nav__item">
+              <a href="#" class="user-nav__link">
+                <p class="user-nav__number"></p>
+                <svg class="user-nav__icon" width="20" height="22">
+                  <use href="#icon-cabinet"></use>
+                </svg>
+                <p class="user-nav__text">Кабинет</p>
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Антицеллюлитный массаж</a>
+            <li class="user-nav__item">
+              <a href="#" class="user-nav__link">
+                <p class="user-nav__number user-nav__number--favorite">2</p>
+                <svg class="user-nav__icon user-nav__icon--favorites" width="17" height="23">
+                  <use href="#icon-favorites"></use>
+                </svg>
+                <p class="user-nav__text">Избранное</p>
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Классический массаж</a>
+            <li class="user-nav__item">
+              <a href="#" class="user-nav__link">
+                <p class="user-nav__number">5</p>
+                <svg class="user-nav__icon user-nav__icon--comparison" width="17" height="20">
+                  <use href="#icon-comparison"></use>
+                </svg>
+                <p class="user-nav__text">Сравнение</p>
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Обучение</a>
+            <li class="user-nav__item">
+              <a href="#" class="user-nav__link">
+                <p class="user-nav__number user-nav__number--cart user-nav__number--active">5</p>
+                <svg class="user-nav__icon user-nav__icon--cart" width="23" height="22">
+                  <use href="#icon-cart"></use>
+                </svg>
+                <p class="user-nav__text">Корзина</p>
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Косметика для мастеров</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Статьи</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">О студии</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Контакты</a>
-            </li>
-          </ul> -->
+          </ul>
+
+          <div class="nav__phone-block phone-block">
+            <p class="phone-block__text">Бесплатно по РФ</p>
+            <a class="phone-block__phone" href="tel:+88005556374">8 800 555-63-74</a>
+            <div class="phone-block__sity-wrapper">
+              <svg class="phone-block__icon" width="10" height="14">
+                <use href="#icon-tick"></use>
+              </svg>
+              <button class="phone-block__sity">Москва</button>
+            </div>
+          </div>
+
+          <button class="nav__request-button">
+            <span class="nav__request-text-1">Консультация</span>
+            <span class="nav__request-text-2">Запросить консультацию</span>
+          </button>
+
         </nav>
 
       </header>
