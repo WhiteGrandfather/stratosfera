@@ -40,7 +40,8 @@
   display: none;
 }
 
-.nav__item {
+.nav__item,
+.nav__sublist-item {
   border-bottom: 1px solid @background-gray;
 }
 
@@ -58,6 +59,11 @@
   line-height: 18px;
 }
 
+.nav__sublist {
+  display: none;
+  flex-direction: column;
+}
+
 @media (max-width: @mobile-width) {
   .nav {
     position: relative;
@@ -65,6 +71,45 @@
 
   .nav__list-wrapper {
     position: absolute;
+  }
+
+  .nav__list--closed {
+    display: none;
+  }
+
+  .nav__link {
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 6.5%;
+  }
+
+  .nav__list-icon {
+    transform: rotate(-90deg);
+  }
+
+  .nav__item--hidden {
+    display: none;
+  }
+
+  .nav__item--menu-show > .nav__link > .nav__list-icon--active {
+    display: none;
+  }
+
+  .nav__item--menu-show > .nav__sublist {
+    display: flex;
+
+    border-top: 1px solid @background-gray;
+  }
+
+  .nav__item--menu-show > .nav__link > .nav__text {
+    width: auto;
+    padding-bottom: 8px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 13px;
+
+    border-bottom: 2px solid @background-green;
   }
 }
 
@@ -78,7 +123,6 @@
   .nav__list-wrapper {
     display: flex;
 
-    //Временно для сетки
     width: 56.9%;
 
     background-color: transparent;

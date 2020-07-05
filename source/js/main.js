@@ -1,76 +1,184 @@
 'use strict';
 
 (function () {
-  var ESC_KEY = 'Escape';
+  var topWrapperElement = document.querySelector('.page-header__top-wrapper');
+  var toggleElement = topWrapperElement.querySelector('.toggle');
+  var toggleIconElement = toggleElement.querySelector('.toggle__icon');
+  var logoElement = topWrapperElement.querySelector('.logo');
+  var backButtonElement = topWrapperElement.querySelector('.page-header__back-button');
+  var navListWrapperElement = document.querySelector('.nav__list-wrapper');
+  var navListElement = navListWrapperElement.querySelector('.nav__list');
+  var catalogElement = navListWrapperElement.querySelector('.catalog');
+  var catalogTextElement = catalogElement.querySelector('.catalog__text');
+  var navListElement = navListWrapperElement.querySelector('.nav__list');
 
-  var popupElement = document.querySelector('.popup');
-  var formWindowElement = popupElement.querySelector('.popup__form-window');
-  var SuccessWindowElement = popupElement.querySelector('.popup__success-window');
-  var toggleElement = document.querySelector('.nav__toggle');
-
-  var onPopupAreaClick = function (event) {
-    if(event.target.classList.contains('popup')) {
-      event.stopPropagation();
-      onPopupClose();
-    };
-  };
-
-  var getEscEvent = function (escEvt, action) {
-    if (escEvt.key === ESC_KEY) {
-      action();
-    };
-  };
-
-  var onPopupButtonClose = function (event) {
-    if (event.target.classList.contains('popup__button-close')) {
-      onPopupClose();
-    };
-  };
-
-  var onEscPopupClose = function (event) {
-    getEscEvent(event, onPopupClose);
-  };
-
-  var onPopupOpen = function (event) {
-    if (event.target.classList.contains('capture-block__button') || event.target.classList.contains('contacts__callback-button')) {
-      popupElement.classList.remove('popup--closed');
-
-      document.removeEventListener('click', onPopupOpen);
-      document.removeEventListener('mousemove', window.animation);
-      popupElement.addEventListener('click', onPopupButtonClose);
-      document.addEventListener('keydown', onEscPopupClose);
-      popupElement.addEventListener('click', onPopupAreaClick);
-      popupElement.addEventListener('submit', onFormSend);
+  var goUp = function () {
+    var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+    if(top > 0) {
+      window.scrollBy(0,-100);
     }
+  }
+
+  // Navlist
+
+  var openNavSublist = function () {
+    logoElement.classList.add('logo--menu-active');
+    topWrapperElement.classList.add('page-header__top-wrapper--submenu-active');
+    catalogTextElement.classList.add('nav__text--active');
+
+    goUp();
+
+    catalogElement.querySelectorAll('.catalog__item').forEach(function (element) {
+      if (!element.classList.contains('catalog__item--menu-show')) {
+        element.classList.add('catalog__item--hidden');
+      }
+    })
+
+    navListElement.querySelectorAll('.nav__item').forEach(function (element) {
+      if (!element.classList.contains('nav__item--menu-show')) {
+        element.classList.add('nav__item--hidden');
+      }
+    })
+
+
+    toggleElement.removeEventListener('click', onToggleClose);
+    toggleElement.addEventListener('click', onCloseNavSublist);
+    backButtonElement.addEventListener('click', onBackNavButton);
   };
 
-  var onPopupClose = function (event) {
-    popupElement.classList.add('popup--closed');
 
-    if (!popupElement.classList.contains('popup__form-window--closed')) {
-      formWindowElement.classList.remove('popup__form-window--closed');
-      SuccessWindowElement.classList.add('popup__success-window--closed');
-    };
+  var onNavItem = function (event) {
+    if (event.currentTarget.classList.contains('nav__item--sublist')) {
 
-    document.addEventListener('click', onPopupOpen);
-    document.addEventListener('mousemove', window.animation);
-    document.removeEventListener('keydown', onEscPopupClose);
-    popupElement.removeEventListener('click', onPopupAreaClick);
-    popupElement.removeEventListener('submit', onFormSend);
+      event.preventDefault();
+      event.currentTarget.classList.add('nav__item--menu-show');
+      openNavSublist();
+    }
+  }
+
+  var getCloseNavSubListEvent = function () {
+    navListElement.querySelector('.nav__item--menu-show').classList.remove('nav__item--menu-show');
+    logoElement.classList.remove('logo--menu-active');
+    topWrapperElement.classList.remove('page-header__top-wrapper--submenu-active');
+    navListElement.classList.remove('nav__list--closed');
+    catalogTextElement.classList.remove('nav__text--active');
+
+    catalogElement.querySelectorAll('.catalog__item').forEach(function (element) {
+      element.classList.remove('catalog__item--hidden');
+    })
+
+    navListElement.querySelectorAll('.nav__item').forEach(function (element) {
+      if (!element.classList.contains('nav__item--menu-show')) {
+        element.classList.remove('nav__item--hidden');
+      }
+    })
+
+    backButtonElement.removeEventListener('click', onBackNavButton);
+    toggleElement.removeEventListener('click', onCloseNavSublist);
   };
 
-  var onFormSend = function (event) {
-    event.preventDefault();
-    SuccessWindowElement.classList.remove('popup__success-window--closed');
-    formWindowElement.classList.add('popup__form-window--closed');
+  var onBackNavButton = function () {
+    getCloseNavSubListEvent();
+
+    toggleElement.addEventListener('click', onToggleClose);
   };
 
+  var onCloseNavSublist = function () {
+    getCloseNavSubListEvent();
+    onToggleClose();
 
-  if (window.matchMedia('(min-width: 992px)').matches){
-    document.addEventListener('mousemove', window.animation);
-  } else {
-    toggleElement.addEventListener('click', window.toggle);
+    toggleElement.removeEventListener('click', onCloseNavSublist);
   };
 
-  document.addEventListener('click', onPopupOpen);
+  // Catalog
+
+  var getCloseSubListEvent = function () {
+    catalogElement.querySelector('.catalog__item--menu-show').classList.remove('catalog__item--menu-show');
+    logoElement.classList.remove('logo--menu-active');
+    topWrapperElement.classList.remove('page-header__top-wrapper--submenu-active');
+    navListElement.classList.remove('nav__list--closed');
+    catalogTextElement.classList.remove('catalog__text--active');
+
+    catalogElement.querySelectorAll('.catalog__item').forEach(function (element) {
+      element.classList.remove('catalog__item--hidden');
+    })
+
+    toggleElement.removeEventListener('click', onCloseSublist);
+    backButtonElement.removeEventListener('click', onBackButton);
+  };
+
+  var openSublist = function () {
+    logoElement.classList.add('logo--menu-active');
+    topWrapperElement.classList.add('page-header__top-wrapper--submenu-active');
+    navListElement.classList.add('nav__list--closed');
+    catalogTextElement.classList.add('catalog__text--active');
+
+    catalogElement.querySelectorAll('.catalog__item').forEach(function (element) {
+      if (!element.classList.contains('catalog__item--menu-show')) {
+        element.classList.add('catalog__item--hidden');
+      }
+    })
+
+    goUp();
+
+    toggleElement.removeEventListener('click', onToggleClose);
+    toggleElement.addEventListener('click', onCloseSublist);
+    backButtonElement.addEventListener('click', onBackButton);
+  };
+
+  var onBackButton = function () {
+    getCloseSubListEvent();
+
+    toggleElement.addEventListener('click', onToggleClose);
+  };
+
+  var onCloseSublist = function () {
+    getCloseSubListEvent();
+    onToggleClose();
+
+    toggleElement.removeEventListener('click', onCloseSublist);
+  };
+
+  var onCatalogItem = function (event) {
+    if (event.currentTarget.classList.contains('catalog__item--sublist')) {
+
+      event.preventDefault();
+      event.currentTarget.classList.add('catalog__item--menu-show');
+      openSublist();
+    }
+  }
+
+  var onToggleOpen = function () {
+
+    toggleElement.classList.add('toggle--cross');
+    toggleIconElement.classList.add('toggle__icon--active');
+    navListWrapperElement.classList.add('nav__list-wrapper--active');
+
+    catalogElement.querySelectorAll('.catalog__item').forEach(function (element) {
+      element.addEventListener('click', onCatalogItem);
+    });
+
+    navListElement.querySelectorAll('.nav__item').forEach(function (element) {
+      element.addEventListener('click', onNavItem);
+    });
+
+    toggleElement.removeEventListener('click', onToggleOpen);
+    toggleElement.addEventListener('click', onToggleClose);
+  }
+
+  var onToggleClose = function () {
+    toggleElement.classList.remove('toggle--cross');
+    toggleIconElement.classList.remove('toggle__icon--active');
+    navListWrapperElement.classList.remove('nav__list-wrapper--active');
+
+
+    catalogElement.querySelectorAll('.catalog__item').forEach(function (element) {
+      element.removeEventListener('click', onCatalogItem);
+    });
+
+    toggleElement.addEventListener('click', onToggleOpen);
+    toggleElement.removeEventListener('click', onToggleClose);
+  }
+
+  toggleElement.addEventListener('click', onToggleOpen);
 })();

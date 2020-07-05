@@ -84,7 +84,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="catalog__item">
+              <li class="catalog__item catalog__item--sublist">
                 <a href="#" class="catalog__link">
                   <svg class="catalog__icon" width="33" height="33">
                     <use href="#icon-cnc-electronics"></use>
@@ -95,8 +95,7 @@
                   </svg>
                 </a>
 
-                <!-- Временно style="display: none"-->
-                <ul class="catalog__subdirectory-list" style="display: none">
+                <ul class="catalog__subdirectory-list">
                   <li class="catalog__subdirectory-item">
                     <a href="#" class="catalog__link">
                       <svg class="catalog__icon" width="31" height="31">
@@ -234,7 +233,7 @@
                       <svg class="catalog__icon" width="31" height="31">
                         <use href="#icon-power-supply-1"></use>
                       </svg>
-                      <p class="catalog__text">Твердотельные реле и аксессуары</p>
+                      <p class="catalog__text">Твердотельные реле<br> и аксессуары</p>
                       <svg class="catalog__arrow-icon" width="12" height="8">
                         <use href="#icon-arrow"></use>
                       </svg>
@@ -344,7 +343,7 @@
                       <svg class="catalog__icon" width="28" height="28">
                         <use href="#icon-socket"></use>
                       </svg>
-                      <p class="catalog__text">Цифровые измерители и измерительные панели для датчиков</p>
+                      <p class="catalog__text">Цифровые измерители<br> и измерительные<br> панели для датчиков</p>
                       <svg class="catalog__arrow-icon" width="12" height="8">
                         <use href="#icon-arrow"></use>
                       </svg>
@@ -487,53 +486,77 @@
               </li>
             </ul>
 
-            <ul class="nav__list nav__list--closed">
-              <li class="nav__item">
-                <a href="#" class="nav__link">О компании
+            <ul class="nav__list">
+              <li class="nav__item nav__item--sublist">
+                <a href="#" class="nav__link">
+                  <p class="nav__text">О компании</p>
                   <svg class="nav__list-icon nav__list-icon--active" width="12" height="8">
                     <use href="#icon-arrow"></use>
                   </svg>
                 </a>
 
-                <!-- Временно скрыто -->
-                <ul class="nav__sublist" style="display: none">
+                <ul class="nav__sublist">
                   <li class="nav__sublist-item">
-                    <a href="#" class="nav__sublist-link">Наше производство</a>
+                    <a href="#" class="nav__link">
+                      <p class="nav__text">Наше производство</p>
+                      <svg class="nav__list-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="nav__sublist-item">
-                    <a href="#" class="nav__sublist-link">Наши сотрудники</a>
+                    <a href="#" class="nav__link">
+                      <p class="nav__text">Наши сотрудники</p>
+                      <svg class="nav__list-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="nav__sublist-item">
-                    <a href="#" class="nav__sublist-link">Вакансии</a>
+                    <a href="#" class="nav__link">
+                      <p class="nav__text">Вакансии</p>
+                      <svg class="nav__list-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="nav__sublist-item">
-                    <a href="#" class="nav__sublist-link">Новости</a>
+                    <a href="#" class="nav__link">
+                      <p class="nav__text">Новости</p>
+                      <svg class="nav__list-icon" width="12" height="8">
+                        <use href="#icon-arrow"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Покупателю
+                <a href="#" class="nav__link">
+                  <p class="nav__text">Покупателю</p>
                   <svg class="nav__list-icon nav__list-icon--active" width="12" height="8">
                     <use href="#icon-arrow"></use>
                   </svg>
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Акции
+                <a href="#" class="nav__link">
+                  <p class="nav__text">Акции</p>
                   <svg class="nav__list-icon" width="12" height="8">
                     <use href="#icon-arrow"></use>
                   </svg>
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Поддержка и сервис
+                <a href="#" class="nav__link">
+                  <p class="nav__text">Поддержка и сервис</p>
                   <svg class="nav__list-icon" width="12" height="8">
                     <use href="#icon-arrow"></use>
                   </svg>
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Контакты
+                <a href="#" class="nav__link">
+                  <p class="nav__text">Контакты</p>
                   <svg class="nav__list-icon" width="12" height="8">
                     <use href="#icon-arrow"></use>
                   </svg>
@@ -629,8 +652,6 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <script src="js/animation.js"></script>
     <script src="js/toggle.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>
