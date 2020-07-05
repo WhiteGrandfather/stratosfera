@@ -13,10 +13,8 @@
   var navListElement = navListWrapperElement.querySelector('.nav__list');
 
   var goUp = function () {
-    var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
-    if(top > 0) {
-      window.scrollBy(0,-100);
-    }
+
+      window.scroll(0, 0);
   }
 
   // Navlist
